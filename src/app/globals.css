@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Inter-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./../assets/fonts/inter-v13-latin-500.woff2') format('woff2');
+}
+/* space-grotesk-500 (mediam) - latin */
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 500;
+  src: url("./../assets/fonts/Gilroy-Medium.eot");
+  src: url("./../assets/fonts/Gilroy-Medium.eot") format("embedded-opentype"),
+       url("./../assets/fonts/Gilroy-Medium.woff") format("woff"), 
+       url("./../assets/fonts/Gilroy-Medium.ttf") format("truetype");
+}
+/* space-grotesk-600 (semi-bold) - latin */
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 600;
+  src: url("./../assets/fonts/Gilroy-SemiBold.eot");
+  src: url("./../assets/fonts/Gilroy-SemiBold.eot") format("embedded-opentype"),
+       url("./../assets/fonts/Gilroy-SemiBold.woff") format("woff"), 
+       url("./../assets/fonts/Gilroy-SemiBold.ttf") format("truetype");
+}
+.Inter_500 {
+  font-family: 'Inter';
+  font-weight: 500;
+}
+.Gilroy_500{
+  font-family: 'Gilroy';
+  font-weight: 500;
+}
+.Gilroy_600{
+  font-family: 'Gilroy';
+  font-weight: 600;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Inter';
+  font-weight: 400;
+}
+body{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+.no-scroll {
+  overflow: hidden;
+}
+.gradient{
+  background: linear-gradient(0deg, rgb(34 34 34 / 0%) 2%, rgb(34 34 34) 52%, rgb(34 34 34 / 0%) 100%);
+}
+.revenue-bgGradient{
+  background: linear-gradient(0deg, rgba(83,83,83,0) 0%, rgba(83,83,83,1) 100%);
+}
+.TitleGradient{
+  background:linear-gradient(90deg, rgba(151,71,255,1) 0%, rgba(29,71,235,1) 100%);
+  color: transparent;
+  background-clip: text;
+}
+@media (max-width: 640px) {
+  .TextGradient{
+    background:linear-gradient(90deg, rgba(151,71,255,1) 0%, rgba(29,71,235,1) 100%);
+    color: transparent;
+    background-clip: text;
+  }
+}
+.headerTransition {
+  transition: padding 0.5s, box-shadow 0.5s;
+}
+.apexcharts-toolbar{
+  display: none !important;
+}
+.inputStyle > div > div{
+  height: 100%;
+  background-color: #FCFCFC;
+}
+.inputStyle > div > div label{
+  padding-bottom: 8px;
+  padding-left: 10px;
+  font-weight: 600;
+  color: #7A7A7A !important;
+}
+.TableTitle:nth-child(2){
+  text-align: start;
+  width: 230px;
+}
+.custom-chart-container #chart .apexcharts-legend {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #E6EBF8;
+  width: fit-content;
+  gap: 10px;
+  top: 0;
+  left: 0;
+} 
+@media (max-width: 479px) {
+  .custom-chart-container #chart .apexcharts-legend {
+    bottom: 0 !important;
+    margin: auto;
+  }
+}
